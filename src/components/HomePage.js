@@ -12,7 +12,7 @@ function HomePage(props) {
 
     const containerStyle = {
         width: '90vmax',
-        height: '400px'
+        height: '50vmax',
       };
 
       const center = {
@@ -23,6 +23,7 @@ function HomePage(props) {
     return (
         <div className="home__container--main">
             <div className="home__container--OAuth">
+                <div></div>
                 <div className="home__container--profile">
                     <div className="home__container--name">
                         {name}
@@ -33,18 +34,20 @@ function HomePage(props) {
                     <div className="home__container--profile-image">
                         <img className="home__image--profile" src={`${imgSrc}`} alt="profile-pic" />
                     </div>
+                    <Logout />
                 </div>
-                <Logout />
             </div>
-            <LoadScript
-                googleMapsApiKey="AIzaSyBo4e5Xf0Mbt3QWjz6YsLX01tCCVcDjEq0"
-            >
-                <GoogleMap
-                    mapContainerStyle={containerStyle}
-                    center={center}
-                    zoom={10}
-                />
-            </LoadScript>
+            <div className="home__container--map">
+                <LoadScript
+                    googleMapsApiKey="AIzaSyBo4e5Xf0Mbt3QWjz6YsLX01tCCVcDjEq0"
+                >
+                    <GoogleMap
+                        mapContainerStyle={containerStyle}
+                        center={center}
+                        zoom={10}
+                    />
+                </LoadScript>
+            </div>
         </div>
     )
 }
