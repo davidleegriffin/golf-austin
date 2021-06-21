@@ -13,12 +13,12 @@ function HomePage(props) {
     const containerStyle = {
         width: '90vmax',
         height: '50vmax',
-      };
+    };
 
-      const center = {
+    const center = {
         lat: 30.2672,
         lng: -97.7431
-      };
+    };
 
     return (
         <div className="home__container--main">
@@ -43,9 +43,6 @@ function HomePage(props) {
                         process.env.REACT_APP_GOOGLE_MAPS_API_KEY
                     }
                 >
-                {/* <LoadScript
-                    googleMapsApiKey="AIzaSyBo4e5Xf0Mbt3QWjz6YsLX01tCCVcDjEq0"
-                > */}
                     <GoogleMap
                         mapContainerStyle={containerStyle}
                         center={center}
@@ -55,6 +52,12 @@ function HomePage(props) {
                             position={{
                             lat: 30.412344994349912,
                             lng: -97.89943256168085,
+                            }}
+                        />
+                        <Marker
+                            position={{
+                            lat: 30.345999846740344, 
+                            lng: -97.94887104494033,
                             }}
                         />
                     </GoogleMap>
