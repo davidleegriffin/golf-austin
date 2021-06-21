@@ -5,3 +5,15 @@
     align-items: center;
     padding: 20px;
 }
+
+.home__container--name {
+    font-size: xx-large;
+}
+
+.home__container--email {
+    font-size: small;
+}
+
+.home__image--profile {
+    border-radius: 50%;
+}
