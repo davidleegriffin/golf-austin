@@ -1,5 +1,5 @@
 import React from 'react';
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import Logout from './Logout';
 import './HomePage.css';
 
@@ -39,13 +39,25 @@ function HomePage(props) {
             </div>
             <div className="home__container--map">
                 <LoadScript
-                    googleMapsApiKey="AIzaSyBo4e5Xf0Mbt3QWjz6YsLX01tCCVcDjEq0"
+                    googleMapsApiKey={
+                        process.env.REACT_APP_GOOGLE_MAPS_API_KEY
+                    }
                 >
+                {/* <LoadScript
+                    googleMapsApiKey="AIzaSyBo4e5Xf0Mbt3QWjz6YsLX01tCCVcDjEq0"
+                > */}
                     <GoogleMap
                         mapContainerStyle={containerStyle}
                         center={center}
                         zoom={10}
-                    />
+                    >
+                        <Marker
+                            position={{
+                            lat: 30.412344994349912,
+                            lng: -97.89943256168085,
+                            }}
+                        />
+                    </GoogleMap>
                 </LoadScript>
             </div>
         </div>
