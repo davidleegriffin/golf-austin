@@ -11,7 +11,7 @@ function HomePage(props) {
     let googleId = (props.props.googleId) ? props.props.googleId : "";
 
     const containerStyle = {
-        width: '400px',
+        width: '90vmax',
         height: '400px'
       };
 
@@ -22,30 +22,29 @@ function HomePage(props) {
 
     return (
         <div className="home__container--main">
-            <div className="home__container--profile">
-                <div className="home__container--name">
-                    {name}
+            <div className="home__container--OAuth">
+                <div className="home__container--profile">
+                    <div className="home__container--name">
+                        {name}
+                    </div>
+                    <div className="home__container--email">
+                        {email}
+                    </div>
+                    <div className="home__container--profile-image">
+                        <img className="home__image--profile" src={`${imgSrc}`} alt="profile-pic" />
+                    </div>
                 </div>
-                <div className="home__container--email">
-                    {email}
-                </div>
-                <div className="home__container--profile-image">
-                    <img className="home__image--profile" src={`${imgSrc}`} alt="profile-pic" />
-                </div>
+                <Logout />
             </div>
-            <Logout />
             <LoadScript
-      googleMapsApiKey="AIzaSyBo4e5Xf0Mbt3QWjz6YsLX01tCCVcDjEq0"
-    >
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={10}
-      >
-        { /* Child components, such as markers, info windows, etc. */ }
-        <></>
-      </GoogleMap>
-    </LoadScript>
+                googleMapsApiKey="AIzaSyBo4e5Xf0Mbt3QWjz6YsLX01tCCVcDjEq0"
+            >
+                <GoogleMap
+                    mapContainerStyle={containerStyle}
+                    center={center}
+                    zoom={10}
+                />
+            </LoadScript>
         </div>
     )
 }

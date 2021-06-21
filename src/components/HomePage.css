@@ -1,9 +1,14 @@
 .home__container--main {
     display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.home__container--OAuth {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
 }
 
 .home__container--name {
