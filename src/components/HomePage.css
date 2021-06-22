@@ -40,3 +40,7 @@
     height: 50vmax;
     width: 90vmax;
 }
+
+.home__infoWindow--name {
+    color: black;
+}
