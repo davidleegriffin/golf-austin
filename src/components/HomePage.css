@@ -43,4 +43,6 @@
 
 .home__infoWindow--name {
     color: black;
+    height: 100px;
+    width: 100px;
 }

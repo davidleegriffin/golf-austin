@@ -124,12 +124,15 @@ function HomePage(props) {
                     <GoogleMap
                         mapContainerStyle={containerStyle}
                         center={center}
-                        zoom={10}
+                        zoom={11.5}
                     >
                         {
                             locations.map(item => {
                                 return (
                                     <Marker key={item.name} 
+                                        icon={
+                                            'https://icons.iconarchive.com/icons/everaldo/crystal-clear/48/App-golf-game-icon.png'
+                                        }
                                         position={item.location}
                                         onClick={() => onSelect(item)}
                                     />
