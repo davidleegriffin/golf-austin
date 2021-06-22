@@ -9,6 +9,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .home__container--profile {
@@ -36,7 +37,7 @@
 
 .home__container--map {
     position: absolute;
-    top: 30%;
+    top: 23vmax;
     height: 50vmax;
     width: 90vmax;
 }
