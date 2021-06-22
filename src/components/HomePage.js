@@ -27,39 +27,74 @@ function HomePage(props) {
 
     const locations = [
         {
-        name: "UT Golf Club",
-        location: { 
-            lat: 30.412344994349912,
-            lng: -97.89943256168085,
-        },
-        },
-        {
-        name: "Spanish Oaks",
-        location: { 
-            lat: 30.345999846740344, 
-            lng: -97.94887104494033,
-        },
+            name: "UT Golf Club",
+            location: { 
+                lat: 30.35645895033929, 
+                lng: -97.89316004412667,
+            },
         },
         {
-        name: "Riverside Golf Course",
-        location: { 
-            lat: 30.247224963112888, 
-            lng: -97.70303065407083,
-        },
-        },
-        {
-        name: "Hancock Golf Course",
-        location: { 
-            lat: 30.306523602979013, 
-            lng: -97.72294337379653,
-        },
+            name: "Austin Country Club",
+            location: { 
+                lat: 30.342506721735976, 
+                lng: -97.79759910777346,
+            },
         },
         {
-        name: "Lions Municipal Golf Course",
-        location: { 
-            lat: 30.300002506709184, 
-            lng: -97.77512843238802,
+            name: "Spanish Oaks",
+            location: { 
+                lat: 30.301056531418297,  
+                lng: -97.94533494871781,
+            },
         },
+        {
+            name: "Barton Creek Country Club",
+            location: { 
+                lat: 30.270621406552227,  
+                lng: -97.87561323973802,
+            },
+        },
+        {
+            name: "Lost Creek Country Club",
+            location: { 
+                lat: 30.275623121157704,   
+                lng: -97.84929439900793,
+            },
+        },
+        {
+            name: "Riverside Golf Course",
+            location: { 
+                lat: 30.247224963112888, 
+                lng: -97.70303065407083,
+            },
+        },
+        {
+            name: "Hancock Golf Course",
+            location: { 
+                lat: 30.299353681539625,  
+                lng: -97.7243986431805,
+            },
+        },
+        {
+            name: "Morris Williams Golf Course",
+            location: { 
+                lat: 30.289426474278685,  
+                lng: -97.6940893185249,
+            },
+        },
+        {
+            name: "Grey Rock Golf and Tennis",
+            location: { 
+                lat: 30.183825034720783,  
+                lng: -97.91382625799028,
+            },
+        },
+        {
+            name: "Lions Municipal Golf Course",
+            location: { 
+                lat: 30.290315108240506,  
+                lng: -97.77703278644572,
+            },
         }
     ];
 
