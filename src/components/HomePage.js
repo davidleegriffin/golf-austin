@@ -65,6 +65,12 @@ function HomePage(props) {
                     <Logout />
                 </div>
             </div>
+            <div className="home__container--buttons">
+                <button className="home__button--public">All</button>
+                <button className="home__button--public">Public</button>
+                <button className="home__button--public">Private</button>
+                <button className="home__button--public">9-Hole</button>
+            </div>
             <div className="home__container--map">
                 <LoadScript
                     googleMapsApiKey={
@@ -101,7 +107,6 @@ function HomePage(props) {
                                     <div>
                                         {selected.Name__A}
                                     </div>
-                                    {console.log('img', `${selected.ImageUrl__D}`)}
                                     <div>
                                         <img src={`${selected.ImageUrl__D}`} alt="golf course image" width="150px" height="150px" />
                                     </div>
