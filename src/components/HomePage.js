@@ -98,9 +98,13 @@ function HomePage(props) {
                                 onCloseClick={() => setSelected({})}
                                 >
                                 <div className="home__infoWindow--name">
-                                    {/* {selected.Name__A} */}
-                                    {/* {console.log(selected.ImageUrl__D)} */}
-                                    <img src="${selected.imageUrl__D}" alt="golf course image" width="50px" height="50px" />
+                                    <div>
+                                        {selected.Name__A}
+                                    </div>
+                                    {console.log('img', `${selected.ImageUrl__D}`)}
+                                    <div>
+                                        <img src={`${selected.ImageUrl__D}`} alt="golf course image" width="150px" height="150px" />
+                                    </div>
                                 </div>
 
                                 </InfoWindow>

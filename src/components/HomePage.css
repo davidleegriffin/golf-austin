@@ -50,9 +50,13 @@
 }
 
 .home__infoWindow--name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: black;
-    height: fit-content;
-    width: fit-content;
+    height: max-content;
+    width: max-content;
 }
 
 @media only screen and (max-width: 800px) {
