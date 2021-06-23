@@ -1,5 +1,5 @@
 html, body {
-  height: 100%;
+  height: 100vmax;
 }
 
 .App {
@@ -7,4 +7,7 @@ html, body {
   background-color:rgba(0, 75, 0, 0.5);
   color: white;
   height: 100vmax;
+  width: 100vmax;
 }
+
+

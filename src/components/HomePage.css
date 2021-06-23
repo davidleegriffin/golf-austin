@@ -36,8 +36,11 @@
 }
 
 .home__container--map {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     position: absolute;
-    top: 25vmax;
+    top: 35%;
     height: 50vmax;
     width: 90vmax;
 }
@@ -46,4 +49,22 @@
     color: black;
     height: 100px;
     width: 100px;
+}
+
+@media only screen and (max-width: 800px) {
+    .home__container--profile {
+        /* position: relative; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; 
+        /* margin-top: 100px;  */
+         
+    }
+    .home__container--map {
+        position: absolute;
+        left: 20px;
+        display: flex;
+        justify-content: flex-start; 
+    }
 }

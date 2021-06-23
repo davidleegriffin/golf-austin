@@ -1,3 +1,11 @@
 .splash__container--main {
     padding: 20px;
 }
+
+@media only screen and (max-width: 800px) {
+    .splash__container--main {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 35px;
+    }
+}

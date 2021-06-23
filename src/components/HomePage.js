@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
+import { useQuery } from "@apollo/react-hooks"
+import { GET_GOLF } from "../queries/getGolf.js"
 import Logout from './Logout';
 import './HomePage.css';
 
@@ -11,13 +13,27 @@ function HomePage(props) {
     let imgSrc = (props.props.imageUrl) ? props.props.imageUrl : "";
     let googleId = (props.props.googleId) ? props.props.googleId : "";
 
+    console.log(googleId);
+
+    const {
+        data,
+        loading,
+        error
+    } = useQuery(GET_GOLF)
+    
+    const golf = data?.golf;
+    console.log('golf', golf);
+    
+    if (loading) return <p>Almost there...</p>
+    if (error) return <p>{error.message}</p>
+
     const onSelect = item => {
         setSelected(item);
     }
 
     const containerStyle = {
-        width: '90vmax',
-        height: '50vmax',
+        width: '90vmin',
+        height: '60vmax',
     };
 
     const center = {
