@@ -48,6 +48,31 @@ function HomePage(props) {
         locations.push(ele);
     });
 
+    let publicCourses = [];
+    golf.map(course => {
+        if (course.Type__K === "public") {
+            publicCourses.push(course);
+        }
+    });
+
+    let privateCourses = [];
+    golf.map(green => {
+        if (green.Type__K === "private") {
+            privateCourses.push(green);
+        }
+    });
+
+    let nineCourses = [];
+    golf.map(hole => {
+        if (hole.Holes__L === 9) {
+            nineCourses.push(hole);
+        }
+    });
+
+    console.log('publicCourses', publicCourses);
+    console.log('privateCourses', privateCourses);
+    console.log('nines', nineCourses);
+
     return (
         <div className="home__container--main">
             <div className="home__container--OAuth">
