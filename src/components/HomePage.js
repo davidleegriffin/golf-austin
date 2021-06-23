@@ -143,13 +143,14 @@ function HomePage(props) {
                         zoom={11.5}
                     >
                         {
-                            locations.map(item => {
+                            golf.map(item => {
+                                console.log('item', item.Name__A);
                                 return (
-                                    <Marker key={item.name}
+                                    <Marker key={item.Name__A}
                                         icon={
                                             'https://icons.iconarchive.com/icons/everaldo/crystal-clear/48/App-golf-game-icon.png'
                                         }
-                                        position={item.location}
+                                        position={{lat: item.Latitude__B, lng: item.Longitude__C}}
                                         onClick={() => onSelect(item)}
                                     />
                                 )
@@ -163,7 +164,7 @@ function HomePage(props) {
                                 clickable={true}
                                 onCloseClick={() => setSelected({})}
                                 >
-                                <div className="home__infoWindow--name">{selected.name}</div>
+                                <div className="home__infoWindow--name">{selected.Name__A}</div>
                                 </InfoWindow>
                             )
                         }
