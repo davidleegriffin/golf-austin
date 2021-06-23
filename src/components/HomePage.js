@@ -11,9 +11,9 @@ function HomePage(props) {
     let name = (props.props.name) ? props.props.name : "";
     let email = (props.props.email) ? props.props.email : "";
     let imgSrc = (props.props.imageUrl) ? props.props.imageUrl : "";
-    let googleId = (props.props.googleId) ? props.props.googleId : "";
+    // let googleId = (props.props.googleId) ? props.props.googleId : "";
 
-    console.log('googleId', googleId);
+    // console.log('googleId', googleId);
 
     const {
         data,
@@ -28,7 +28,7 @@ function HomePage(props) {
     if (error) return <p>{error.message}</p>
 
     const onSelect = item => {
-        console.log('item', item);
+        // console.log('item', item);
         setSelected(item);
     }
 
@@ -78,7 +78,6 @@ function HomePage(props) {
                     >
                         {
                             locations.map(item => {
-                                // console.log('item', item.Name__A);
                                 return (
                                     <Marker key={item.Name__A}
                                         icon={
@@ -98,7 +97,12 @@ function HomePage(props) {
                                 clickable={true}
                                 onCloseClick={() => setSelected({})}
                                 >
-                                <div className="home__infoWindow--name">{selected.Name__A}</div>
+                                <div className="home__infoWindow--name">
+                                    {/* {selected.Name__A} */}
+                                    {/* {console.log(selected.ImageUrl__D)} */}
+                                    <img src="${selected.imageUrl__D}" alt="golf course image" width="50px" height="50px" />
+                                </div>
+
                                 </InfoWindow>
                             )
                         }
