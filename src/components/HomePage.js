@@ -7,6 +7,7 @@ import './HomePage.css';
 
 function HomePage(props) {
     const [ selected, setSelected ] = useState({});
+    const [courses, setCourses] = useState();
     // console.log('homepage props', props.props);
     let name = (props.props.name) ? props.props.name : "";
     let email = (props.props.email) ? props.props.email : "";
@@ -42,11 +43,15 @@ function HomePage(props) {
         lng: -97.8231
     };
 
+    
     let locations = [];
     golf.map(ele => {
         // console.log('ele', ele);
         locations.push(ele);
     });
+    
+
+    
 
     let publicCourses = [];
     golf.map(course => {
@@ -69,9 +74,26 @@ function HomePage(props) {
         }
     });
 
+    function allCourses() {
+        setCourses(locations);
+    };
+
+    function getPublicCourses() {
+        setCourses(publicCourses);
+    };
+
+    function getPrivateCourses() {
+        setCourses(privateCourses);
+    };
+
+    function nines() {
+        setCourses(nineCourses);
+    };
+
     console.log('publicCourses', publicCourses);
     console.log('privateCourses', privateCourses);
     console.log('nines', nineCourses);
+    console.log('courses', courses);
 
     return (
         <div className="home__container--main">
@@ -91,10 +113,10 @@ function HomePage(props) {
                 </div>
             </div>
             <div className="home__container--buttons">
-                <button className="home__button--public">All</button>
-                <button className="home__button--public">Public</button>
-                <button className="home__button--public">Private</button>
-                <button className="home__button--public">9-Hole</button>
+                <button className="home__button--public" onClick={allCourses}>All</button>
+                <button className="home__button--public" onClick={getPublicCourses}>Public</button>
+                <button className="home__button--public" onClick={getPrivateCourses}>Private</button>
+                <button className="home__button--public" onClick={nines}>9-Hole</button>
             </div>
             <div className="home__container--map">
                 <LoadScript
@@ -108,7 +130,7 @@ function HomePage(props) {
                         zoom={11}
                     >
                         {
-                            locations.map(item => {
+                            courses?.map(item => {
                                 return (
                                     <Marker key={item.Name__A}
                                         icon={
