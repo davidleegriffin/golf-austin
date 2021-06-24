@@ -163,6 +163,9 @@ function HomePage(props) {
                                             className="home__infoWindow--detail"
                                             to={{
                                                 pathname: "/detail",
+                                                props: {
+                                                    name: {selected}
+                                                }
                                         }}>
                                             <button>Details</button>
                                         </NavLink>

@@ -1,0 +1,39 @@
+
+
+
+.detail__container--navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.detail__h2--header {
+    color: black;
+    text-shadow: 2px 2px 4px white;
+}
+
+.detail__button--home {
+    height: 41px;
+    width: 120px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px black;
+    background-color: rgb(212, 212, 157);
+    color: white;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: black;
+    font-size: x-large;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px black;
+}
+
+.detail__button--home:hover {
+    background-color: rgb(230, 230, 38);
+}
+
+.detail__container--name {
+    transform: scale(2);
+    text-shadow: 2px 2px 4px black;
+}
