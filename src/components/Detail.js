@@ -5,6 +5,8 @@ import './Detail.css'
 function Detail(props) {
 
     const selectedCourse = props?.location.props.name.selected;
+    const dressCode = (props?.location.props.name.selected.DressCode__H) ? props?.location.props.name.selected.DressCode__H : "NONE";
+    console.log(dressCode);
 
     console.log('props', selectedCourse);
     return (
@@ -26,12 +28,17 @@ function Detail(props) {
                     <h1>{ selectedCourse.Name__A }</h1>
                 </div>
                 <div>
-                    <img className="detail__image" src={`${selectedCourse.ImageUrl__D}`} alt="image" width="400px" height="400px" />
+                    <img className="detail__image" src={`${selectedCourse.ImageUrl__D}`} alt="image" width="500px" height="400px" />
                 </div>
                 <div className="detail__container--description">
                         { selectedCourse.Description__E }
                 </div>
-                
+                <div className="detail__container--price">
+                    {selectedCourse.Price__F}
+                </div>
+                <div className="detail__container--dress">
+                    {dressCode}
+                </div>
             </div>
         </div>
     )
