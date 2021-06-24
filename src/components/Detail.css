@@ -47,9 +47,10 @@
 
 .detail__container--name {
     transform: scale(2);
-    width: 200px;
+    width: 250px;
+    /* height: 150px; */
     text-shadow: 2px 2px 4px black;
-    margin-left: 135px;
+    margin-left: 175px;
     z-index: 100;
 }
 
@@ -65,7 +66,7 @@
 .detail__container--description {
     position:relative;
     top: -335px;
-    left: -15px;
+    left: 25px;
     text-shadow: 0px 0px 10px black;
     transform: scale(1.25);
     width: 350px;
