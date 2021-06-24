@@ -36,6 +36,7 @@ function HomePage(props) {
     const containerStyle = {
         width: '90vmin',
         height: '60vmax',
+        borderRadius: '15px',
     };
 
     const center = {
@@ -43,15 +44,15 @@ function HomePage(props) {
         lng: -97.8231
     };
 
-    
+
     let locations = [];
     golf.map(ele => {
         // console.log('ele', ele);
         locations.push(ele);
     });
-    
 
-    
+
+
 
     let publicCourses = [];
     golf.map(course => {
@@ -90,10 +91,9 @@ function HomePage(props) {
         setCourses(nineCourses);
     };
 
-    console.log('publicCourses', publicCourses);
-    console.log('privateCourses', privateCourses);
-    console.log('nines', nineCourses);
-    console.log('courses', courses);
+    if (courses === undefined) {
+        setCourses(locations);
+    };
 
     return (
         <div className="home__container--main">
@@ -156,6 +156,9 @@ function HomePage(props) {
                                     </div>
                                     <div>
                                         <img src={`${selected.ImageUrl__D}`} alt="golf course image" width="150px" height="150px" />
+                                    </div>
+                                    <div>
+                                        <button>Details</button>
                                     </div>
                                 </div>
 
