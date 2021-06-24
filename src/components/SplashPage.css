@@ -3,8 +3,6 @@
 }
 
 .splash__container--main h1 {
-    -webkit-text-stroke-width: 0.75px;
-    -webkit-text-stroke-color: black;
     text-shadow: 2px 2px 4px black;
     transform: scale(2);
 }
@@ -13,6 +11,11 @@
     .splash__container--main {
         display: flex;
         justify-content: flex-start;
+        flex-direction: column;
         margin-left: 35px;
+    }
+
+    .splash__container--main h1 {
+        display: none;
     }
 }
