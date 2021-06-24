@@ -113,10 +113,10 @@ function HomePage(props) {
                 </div>
             </div>
             <div className="home__container--buttons">
-                <button className="home__button--public" onClick={allCourses}>All</button>
                 <button className="home__button--public" onClick={getPublicCourses}>Public</button>
                 <button className="home__button--public" onClick={getPrivateCourses}>Private</button>
                 <button className="home__button--public" onClick={nines}>9-Hole</button>
+                <button className="home__button--public" onClick={allCourses}>All</button>
             </div>
             <div className="home__container--map">
                 <LoadScript

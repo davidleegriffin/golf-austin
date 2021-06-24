@@ -58,6 +58,11 @@
     background-color: rgb(230, 230, 38);
 }
 
+.home__button--public:hover {
+    box-shadow: 4px 4px 8px black;
+    transition: box-shadow 0.25s;
+}
+
 .home__container--buttons {
     position: relative;
     top: 75px;
