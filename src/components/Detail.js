@@ -25,6 +25,13 @@ function Detail(props) {
                 <div className="detail__container--name">
                     <h1>{ selectedCourse.Name__A }</h1>
                 </div>
+                <div>
+                    <img className="detail__image" src={`${selectedCourse.ImageUrl__D}`} alt="image" width="400px" height="400px" />
+                </div>
+                <div className="detail__container--description">
+                        { selectedCourse.Description__E }
+                </div>
+                
             </div>
         </div>
     )

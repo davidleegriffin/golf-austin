@@ -1,13 +1,20 @@
-
-
+.detail__container--main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vmax;
+}
 
 .detail__container--navbar {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 400px;
     height: auto;
+    margin-bottom: 100px;
+    margin-left: 100px;
 }
 
 .detail__h2--header {
@@ -35,5 +42,27 @@
 
 .detail__container--name {
     transform: scale(2);
+    width: 200px;
     text-shadow: 2px 2px 4px black;
+    margin-left: 100px;
+    z-index: 100;
+}
+
+.detail__image {
+    position:relative;
+    top: -150px;
+    opacity: 0.75;
+    z-index: -10;
+    border-radius: 50%;
+}
+
+.detail__container--description {
+    position:relative;
+    top: -350px;
+    left: 100px;
+    text-shadow: 0px 0px 20px black;
+    transform: scale(1.25);
+    width: 200px;
+    font-size: small;
+    font-weight: 900;
 }
