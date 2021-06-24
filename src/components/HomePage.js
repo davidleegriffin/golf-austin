@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { NavLink } from "react-router-dom";
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 import { useQuery } from "@apollo/react-hooks"
 import { GET_GOLF } from "../queries/getGolf.js"
@@ -158,7 +159,13 @@ function HomePage(props) {
                                         <img src={`${selected.ImageUrl__D}`} alt="golf course image" width="150px" height="150px" />
                                     </div>
                                     <div>
-                                        <button>Details</button>
+                                        <NavLink
+                                            className="home__infoWindow--detail"
+                                            to={{
+                                                pathname: "/detail",
+                                        }}>
+                                            <button>Details</button>
+                                        </NavLink>
                                     </div>
                                 </div>
 
