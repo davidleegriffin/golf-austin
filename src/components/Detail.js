@@ -3,11 +3,12 @@ import { NavLink } from "react-router-dom";
 import './Detail.css'
 
 function Detail(props) {
-
+    const [teeTimes, setTeeTimes] = useState();
     const selectedCourse = props?.location.props.name.selected;
     const dressCode = (props?.location.props.name.selected.DressCode__H) ? props?.location.props.name.selected.DressCode__H : "NONE";
-    console.log(dressCode);
+    const teeWeb = (props?.location.props.name.selected.TeeTimes__G) ? props.location.props.name.selected.TeeTimes__G : props.location.props.name.selected.Website__M;
 
+    console.log('teeWeb', teeWeb);
     console.log('props', selectedCourse);
     return (
         <div className="detail__container--main">
@@ -42,10 +43,12 @@ function Detail(props) {
             </div>
             <div className="detail__container--buttons">
                 <div>
-                    <button className="detail__buttons--extra">Tee Times</button>
+                    <a href={teeWeb} target="_blank" referrer="none">
+                        <button className="detail__buttons--extra">Tee Times</button>
+                    </a>
                 </div>
                 <div>
-                    <button className="detail__buttons--extra">Phone</button>
+                    <button className="detail__buttons--extra">Call {selectedCourse.Contact__I}</button>
                 </div>
                 <div>
                     <button className="detail__buttons--extra">Directions</button>
