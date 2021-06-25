@@ -98,6 +98,8 @@
 }
 
 .detail__buttons--extra {
+    position: relative;
+    top: -75px;
     height: 41px;
     width: fit-content;
     margin: 10px;

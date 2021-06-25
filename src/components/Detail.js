@@ -17,9 +17,11 @@ function Detail(props) {
     const teeWeb = (props?.location.props.name.selected.TeeTimes__G) ? props.location.props.name.selected.TeeTimes__G : props.location.props.name.selected.Website__M;
 
     const containerStyle = {
-        width: '90vmin',
-        height: '50vmax',
+        width: '400px',
+        height: '300px',
         borderRadius: '15px',
+        position: 'relative',
+        top: '-250px',
     };
 
     const center = {
