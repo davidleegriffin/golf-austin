@@ -81,7 +81,7 @@ function Detail(props) {
                     <GoogleMap
                         mapContainerStyle={containerStyle}
                         center={center}
-                        zoom={11}
+                        zoom={12}
                     >
                         <Marker 
                             icon={
