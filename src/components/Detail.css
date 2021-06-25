@@ -92,7 +92,7 @@
 
 .detail__container--buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position:relative;
     top: -200px;
 }

@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { NavLink, useHistory } from "react-router-dom";
+import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 import './Detail.css'
 
 function Detail(props) {
@@ -9,13 +10,22 @@ function Detail(props) {
         history.push("/");
     }
 
-    const [teeTimes, setTeeTimes] = useState();
+    // console.log(props.location.props);
+
     const selectedCourse = (props?.location.props.name.selected);
     const dressCode = (props?.location.props.name.selected.DressCode__H) ? props?.location.props.name.selected.DressCode__H : "NONE";
     const teeWeb = (props?.location.props.name.selected.TeeTimes__G) ? props.location.props.name.selected.TeeTimes__G : props.location.props.name.selected.Website__M;
 
-    // console.log('teeWeb', teeWeb);
-    console.log('props', props);
+    const containerStyle = {
+        width: '90vmin',
+        height: '50vmax',
+        borderRadius: '15px',
+    };
+
+    const center = {
+        lat: props.location.props.name.selected.Latitude__B,
+        lng: props.location.props.name.selected.Longitude__C
+    };
 
     return (
         <div className="detail__container--main">
@@ -61,6 +71,24 @@ function Detail(props) {
                     <button className="detail__buttons--extra">Directions</button>
                 </div>
             </div>
+            <LoadScript
+                    googleMapsApiKey={
+                        process.env.REACT_APP_GOOGLE_MAPS_API_KEY
+                    }
+                >
+                    <GoogleMap
+                        mapContainerStyle={containerStyle}
+                        center={center}
+                        zoom={11}
+                    >
+                        <Marker 
+                            icon={
+                                'https://icons.iconarchive.com/icons/everaldo/crystal-clear/48/App-golf-game-icon.png'
+                            }
+                            position={{lat: props.location.props.name.selected.Latitude__B, lng: props.location.props.name.selected.Longitude__C}}
+                        />
+                    </GoogleMap>
+            </LoadScript>
         </div>
     )
 }
