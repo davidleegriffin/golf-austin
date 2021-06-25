@@ -10,7 +10,7 @@ function Detail(props) {
         history.push("/");
     }
 
-    // console.log(props.location.props);
+    console.log(props.location.props);
 
     const selectedCourse = (props?.location.props.name.selected);
     const dressCode = (props?.location.props.name.selected.DressCode__H) ? props?.location.props.name.selected.DressCode__H : "NONE";
