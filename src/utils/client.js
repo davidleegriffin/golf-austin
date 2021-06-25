@@ -1,9 +1,8 @@
-import { InMemoryCache } from 'apollo-boost';
 import { 
     ApolloClient,  
     createHttpLink,
     InMemoryCache,
-} from 'apollo/client';
+} from '@apollo/client';
 
 const {
   REACT_APP_STEPZEN_API_KEY,
