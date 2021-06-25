@@ -36,7 +36,7 @@ function HomePage(props) {
 
     const containerStyle = {
         width: '90vmin',
-        height: '60vmax',
+        height: '50vmax',
         borderRadius: '15px',
     };
 

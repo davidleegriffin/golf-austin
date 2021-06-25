@@ -40,6 +40,17 @@ function Detail(props) {
                     {dressCode}
                 </div>
             </div>
+            <div className="detail__container--buttons">
+                <div>
+                    <button className="detail__buttons--extra">Tee Times</button>
+                </div>
+                <div>
+                    <button className="detail__buttons--extra">Phone</button>
+                </div>
+                <div>
+                    <button className="detail__buttons--extra">Directions</button>
+                </div>
+            </div>
         </div>
     )
 }
