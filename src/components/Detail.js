@@ -1,15 +1,22 @@
 import React, {useState} from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import './Detail.css'
 
 function Detail(props) {
+    const history = useHistory();
+
+    if (props.location.props === undefined) {
+        history.push("/");
+    }
+
     const [teeTimes, setTeeTimes] = useState();
-    const selectedCourse = props?.location.props.name.selected;
+    const selectedCourse = (props?.location.props.name.selected);
     const dressCode = (props?.location.props.name.selected.DressCode__H) ? props?.location.props.name.selected.DressCode__H : "NONE";
     const teeWeb = (props?.location.props.name.selected.TeeTimes__G) ? props.location.props.name.selected.TeeTimes__G : props.location.props.name.selected.Website__M;
 
-    console.log('teeWeb', teeWeb);
-    console.log('props', selectedCourse);
+    // console.log('teeWeb', teeWeb);
+    console.log('props', props);
+
     return (
         <div className="detail__container--main">
             <div className="detail__container--navbar">
@@ -59,4 +66,3 @@ function Detail(props) {
 }
 
 export default Detail;
-
