@@ -1,4 +1,4 @@
-import { ApolloClient } from "@apollo/client"
+import { ApolloClient } from 'apollo-boost';
 
 const {
   REACT_APP_STEPZEN_API_KEY,
